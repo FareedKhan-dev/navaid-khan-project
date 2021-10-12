@@ -1,0 +1,63 @@
+body {
+  font-family: 'Poppins',san-serif;
+}
+
+#the-bus-is-at, #the-bus-is, #countdown {
+  color: white;
+}
+
+.this_me img {
+  max-width: 100%;
+  height: 100vh;
+}
+
+.fixa {
+  position: fixed;
+  left: 50%;
+  top: 0%;
+  margin-top: 50px;
+  margin-left: 80px;
+
+}
+
+.gmap_canvas {
+  position: absolute;
+  background: none !important;
+  width: 600px;
+  height: 800px;
+}
+
+.gmap_iframe {
+  width: 300px !important;
+  height: 300px !important;
+}
+
+#map_canvas {
+  height: 300px;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.custom-map-control-button {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  height: 40px;
+  cursor: pointer;
+}
+
+.custom-map-control-button:hover {
+  background: #ebebeb;
+}
+
+#map>iframe {
+  position: fixed;
+  border: 2px solid #68b54e;
+  border-radius: 5px;
+}
+
