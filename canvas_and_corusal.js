@@ -1,10 +1,4 @@
-$(document).ready(function () {
-  $('.carousel').carousel({
-    interval: 5000,
-    pause: "false"
-  })
 
-});
 var h = document.documentElement.clientHeight;
 console.log(h);
 
