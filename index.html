@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <div id="demo" class="carousel" data-ride="carousel">
+    <div id="demo" class="carousel" data-ride="carousel" data-interval="false">
         <div class="carousel-inner">
             <div class="carousel-item active text-center this_me">
                 <img src="Bild1.png" alt="Image1">
@@ -103,13 +103,13 @@
                 timeleft -= 1;
             }, 1000);
         }
-        $(document).ready(function () {
-            $('.carousel').carousel({
-                interval: 5000,
-                pause: "false"
-            })
+        // $(document).ready(function () {
+        //     $('.carousel').carousel({
+        //         interval: 5000,
+        //         pause: "false"
+        //     })
 
-        });
+        // });
     </script>
     <script src="canvas_and_corusal.js"></script>
     <script src="clock.js"></script>
