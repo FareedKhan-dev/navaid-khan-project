@@ -44,19 +44,6 @@
             <div class="carousel-item  text-center this_me">
                 <img src="imafe_2.png" alt="Image5">
 
-                <div style="position: absolute; top: 70%; left: 50%; transform: translate(-50%,-50%);">
-                    <button onclick="trigger_me()" type="button" class="text-center btn btn-success btn-lg b-none">Pick
-                        Me</button>
-                    <div id="destroy-me">
-
-                        </h3>
-
-                    </div>
-                    <h4 class="text-white" id="finished"></h4>
-                </div>
-                <!-- <h4 id="the-bus-is-at" class="text-white"></h4>
-                        <h4 id="the-bus-is" class="text-white"></h4>
-                        <h4 id="countdown"></h4> -->
             </div>
         </div>
         <a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -66,51 +53,7 @@
             <i class="fas fa-arrow-right fa-2x" style="color: black;"></i>
         </a>
     </div>
-    <script>
-        function trigger_me() {
-            x = ['The bus is at stop 1', 'The bus is at stop 2', 'The bus is at stop 3', 'The bus is at stop 4',
-                'The bus is at stop 5', 'The bus is at stop 6', 'The bus is at stop 7', 'The bus is at stop 8'
-            ]
-            y = Math.round(Math.random() * 7)
 
-            var timeleft = Math.round(Math.random() * 59);
-            downloadTimer = setInterval(function () {
-                if (timeleft <= 0) {
-                    clearInterval(downloadTimer);
-                    document.getElementById("finished").innerHTML =
-                        "<h2>Your Bus is here</h2> <br> Please Wear mask and <br> keep social distancing"
-                    document.getElementById("destroy-me").innerHTML = ""
-                } else {
-                    node1 = document.createElement("h4");
-                    // node2 = document.createElement("h4"); 
-                    node3 = document.createElement("h4");
-                    node1.id = 'the-bus-is-at'
-                    // node2.id = 'the-bus-is'
-                    node3.id = 'countdown'
-
-
-                    document.getElementById("destroy-me").appendChild(node1);
-                    // document.getElementById("destroy-me").appendChild(node2);
-                    document.getElementById("destroy-me").appendChild(node3);
-
-                    document.getElementById("the-bus-is-at").innerHTML = x[y];
-                    // document.getElementById("the-bus-is").innerHTML = "The waiting time is ";
-                    document.getElementById("countdown").innerHTML = "The waiting time is " + timeleft +
-                        " seconds remaining";
-                    document.getElementById("finished").innerHTML =
-                        ""
-                }
-                timeleft -= 1;
-            }, 1000);
-        }
-        // $(document).ready(function () {
-        //     $('.carousel').carousel({
-        //         interval: 5000,
-        //         pause: "false"
-        //     })
-
-        // });
-    </script>
     <script src="canvas_and_corusal.js"></script>
     <script src="clock.js"></script>
 </body>

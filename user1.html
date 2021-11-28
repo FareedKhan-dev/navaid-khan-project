@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media_queries.css">
+</head>
+
+<body>
+    <div id="demo" class="carousel" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active  text-center this_me">
+                <img src="imafe_2.png" alt="Image5">
+
+                <div style="position: absolute; top: 70%; left: 50%; transform: translate(-50%,-50%);">
+                    <button onclick="trigger_me()" type="button" class="text-center btn btn-success btn-lg b-none">Pick
+                        Me</button>
+                    <div id="destroy-me">
+
+                        </h3>
+
+                    </div>
+                    <h4 class="text-white" id="finished"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function trigger_me() {
+            x = ['The bus is at stop 1', 'The bus is at stop 2', 'The bus is at stop 3', 'The bus is at stop 4',
+                'The bus is at stop 5', 'The bus is at stop 6', 'The bus is at stop 7', 'The bus is at stop 8'
+            ]
+            y = Math.round(Math.random() * 7)
+
+            var timeleft = Math.round(Math.random() * 59);
+            downloadTimer = setInterval(function () {
+                if (timeleft <= 0) {
+                    clearInterval(downloadTimer);
+                    document.getElementById("finished").innerHTML =
+                        "<h2>Your Bus is here</h2> <br> Please Wear mask and <br> keep social distancing"
+                    document.getElementById("destroy-me").innerHTML = ""
+                } else {
+                    node1 = document.createElement("h4");
+                    // node2 = document.createElement("h4"); 
+                    node3 = document.createElement("h4");
+                    node1.id = 'the-bus-is-at'
+                    // node2.id = 'the-bus-is'
+                    node3.id = 'countdown'
+
+
+                    document.getElementById("destroy-me").appendChild(node1);
+                    // document.getElementById("destroy-me").appendChild(node2);
+                    document.getElementById("destroy-me").appendChild(node3);
+
+                    document.getElementById("the-bus-is-at").innerHTML = x[y];
+                    // document.getElementById("the-bus-is").innerHTML = "The waiting time is ";
+                    document.getElementById("countdown").innerHTML = "The waiting time is " + timeleft +
+                        " seconds remaining";
+                    document.getElementById("finished").innerHTML =
+                        ""
+                }
+                timeleft -= 1;
+            }, 1000);
+        }
+        // $(document).ready(function () {
+        //     $('.carousel').carousel({
+        //         interval: 5000,
+        //         pause: "false"
+        //     })
+
+        // });
+    </script>
+    <script src="canvas_and_corusal.js"></script>
+    <script src="clock.js"></script>
+</body>
+
+</html>
